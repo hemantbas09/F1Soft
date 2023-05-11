@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  background-color: aqua;
+  padding: 15px;
+  text-decoration: none;
+  width: 20%;
+  text-align: center;
+}
+
+/* ---------------Table----------------- */
+.table {
+  background-color: lightgreen;
+  border: 2px solid red;
+  caption-side: top;
+  border-collapse: collapse;
+
+  border-spacing: 0.4rem;
+}
+th {
+  /* border: 1px solid red; */
+  /* background-color: red; */
+  border: 2px solid black;
+}
+td {
+  border: 2px solid green;
+}

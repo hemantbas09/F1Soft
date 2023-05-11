@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- The main method for including images is  -->
+
+    <img src="download.jpeg" alt="demo-image" />
+    <!-- If the image is svg also use role attributes which is necessary due to voice over bug -->
+    <img src="download.svg" alt="demo-image" role="image" />
+    <!-- srcset  helps to include multiple image sources for different device resolution -->
+    <img
+      src="download.jpeg"
+      alt="demo-image"
+      srcset="download.jpeg 480w, color.gif 768w, Server.png 1200w"
+    />
+    <!-- Video: autoplay , control, loop, muted poster, preload(value are none metadata, auto),crossorigin(anonymous,use-credentials,"") -->
+    <video src="v.mp4" autoplay loop muted poster="download.jpeg"></video>
+    <video
+      src="v.mp4"
+      controls
+      loop
+      poster="download.jpeg"
+      preload="metadata"
+    ></video>
+    <video autoplay>
+      <source src="v.mp4" type="video/mp4" />
+      <source src="v.mp4" autoplay loop type="video/mp4" />
+    </video>
+
+    <!-- Picture Tag -->
+    <!-- Provide multiple version of image and specify source based on various condition 
+    
+    srcset list of image sources and their corresponding descriptors, allow choose the most appropriate source.
+    usemap, and crossorigin are other attriutes.
+    -->
+    <picture>
+      <source media="(min-width: 1200px)" srcset="Server.png" />
+      <source media="(min-width: 768px)" srcset="download.jpeg" />
+      <img src="color.gif" alt="Example Image" />
+    </picture>
+
+    <!-- Object -->
+    <object
+      data="example.jpg"
+      width="400"
+      height="300"
+      type="image/jpeg"
+      aria-label="Search"
+    ></object>
+  </body>
+</html>

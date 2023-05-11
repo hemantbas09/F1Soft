@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- -------------Anchor tag with different value of the href attributes and their behaviour when use click------------------- -->
+    <!-- open the default email because of mailto -->
+    <a class="btn" href="mailto:hemantbasnet61@gmail.com">E-mail Here</a>
+
+    <!-- open the call box with phone phone number dialed with the help of tel  -->
+    <a class="btn" href="tel:9841119798">Call Here</a>
+
+    <!-- Open default email with subject and body filled and empety email. For example it is  used in Invite your friend function
+    Here, ? used for seprete subject  form mailto: 
+    & seperate the field 
+    = for asign the field name and value;
+    %20 is used to enocded the text because url did not take any space. 
+    -->
+
+    <a
+      class="btn"
+      href="mailto:?subject=Join%20me%21&body=You%20need%20to%20show%20your%20human%20that%20you%20can%27t%20be%20owned%21%20Sign%20up%20for%20Machine%20Learning%20workshop.%20We%20are%20taking%20over%20the%20world.%20http%3A%2F%2Fwww.machinelearning.com%23reg
+"
+      >Invite Friend</a
+    >
+
+    <!-- Here we use another attributes called title which give information about that link when user hover the link -->
+    <a class="btn" href="https://www.example.com" title="Already Found"
+      >Visit Example Website</a
+    >
+
+    <!-- Here another attributes downloads with the href value is blob: and download contain the value(file name with th extension) -->
+    <a
+      class="btn"
+      href="https://www.example.com/images/picture.jpg"
+      download="picture.jpg"
+      >Download Image</a
+    >
+
+    <!-- Anchor tag with target attributes -->
+    <!-- With the value _blank which is used for opean link new tab or windows -->
+
+    <a class="btn" href="https://www.example.com" target="_blank"
+      >Open in New Tab</a
+    >
+    <!-- In this the main problem is if user click 15 times 15 new tabs are open, to overcomer this problem use context which is case sensative: now first time it open in new time later it reload same page -->
+    <a class="btn" href="https://www.example.com" target="reg">Register</a>
+    <!-- With the value _blank which is used for opean link in same tab. This is the default value -->
+    <a class="btn" href="https://www.example.com" target="_self"
+      >Open in Same Tab</a
+    >
+
+    <!-- With the value _blank which is used for opean link in parent frame -->
+    <a class="btn" href="https://www.example.com" target="_parent"
+      >Open in parent Frame</a
+    >
+
+    <!-- With the value _blank which is used for opean link new tab or windows -->
+    <a class="btn" href="https://www.example.com" target="_top"
+      >Open in Full Window</a
+    >
+
+    <!---------------------------------- Link ------------------------------------- -->
+    <!-- It is used to define external resources and relationship between current document and external documnet -->
+
+    <!-- This is basic syntex of link -->
+    <link rel="stylesheet" href="#" />
+    <!-- The attributes of the link are 
+        rel= specific the relationship between the current document and linked file,
+        rel values are: stylesheete, icon, preconnect, preload, alternate stylesheet.
+        href= link the url of the file,
+        type= medaia type or MIME type of the linked resources exaple types="text/css","text/sasss","text/javascript" ,"image/x-icon","application/xml"
+        sizes= for the specifying the size of icon. It provide multiple version of icon and let browser choose the most appropriate based in device cabilities.
+     -->
+
+    <link rel="icon" href="icon.png" sizes="16x16 32x32 48x48" />
+
+    <script src="script.js"></script>
+  </body>
+</html>

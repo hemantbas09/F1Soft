@@ -1,0 +1,462 @@
+/* It target all Element on the Page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Calibre", sans-serif;
+}
+
+/* For the body Element */
+body {
+  background-color: rgb(10, 25, 47);
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+}
+
+/* For the Button */
+.btn {
+  background-color: transparent;
+  width: fit-content;
+  color: #ccd6f6;
+  border: 1px solid #64ffda;
+  border-radius: 5%;
+  padding: 0.7rem 1rem;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: translate(-6%, -10%);
+  box-shadow: 5px 7px 0px #64ffda;
+}
+
+p {
+  color: rgb(136, 146, 176);
+  font-size: 20px;
+  line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+}
+h2 {
+  color: rgb(204, 214, 246);
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+}
+h3 {
+  color: rgb(136, 146, 176);
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+a {
+  text-decoration: none;
+  color: #64ffda;
+  display: inline-block;
+}
+a:hover {
+  text-decoration: underline;
+}
+li {
+  list-style: none;
+  color: rgb(136, 146, 176);
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+svg {
+  width: 60%;
+  height: 10%;
+  margin: 10px;
+}
+
+/* ------------Start  For the Header Elememnt ------------*/
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  margin: 0rem 3rem;
+  padding-top: 1rem;
+}
+
+/* For the logo of the Website */
+.logo {
+  font-size: 3rem;
+  font-weight: 900;
+  padding: 0.3rem 1rem;
+  color: #64ffda;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-item {
+  list-style: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(204, 214, 246);
+  cursor: pointer;
+}
+.nav-item a {
+  text-decoration: none;
+  color: #ccd6f6;
+  cursor: pointer;
+}
+
+.nav-item a:hover {
+  color: #64ffda;
+}
+/* Resume Button*/
+.resume {
+  text-decoration: none;
+}
+
+/*--------End for Style in the  Header Component-----------  */
+
+/*---------------------------------------Start for Style in the  Content---------------------------  */
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+/*----------- Start of  Hero Section Style--------------- */
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-intoduction {
+  color: #64ffda;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.hero-mainheading {
+  font-size: 80px;
+}
+
+.hero-subheading {
+  overflow: hidden;
+  font-size: 80px;
+  color: rgb(136, 146, 176);
+}
+
+.hero-description {
+  width: 40rem;
+  padding: 1rem 0rem;
+  margin: 2rem 0rem;
+  font-size: 21px;
+}
+
+.mycourse-btn {
+  padding: 1.5rem 2rem;
+}
+
+/*----------- End of  Hero Section Style--------------- */
+
+/*----------- Start of  About Us Section Style--------------- */
+.aboutus-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12rem;
+  row-gap: 2rem;
+  width: 50%;
+}
+.aboutus {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+.aboutus-description {
+  width: fit-content;
+  margin-top: 1rem;
+  text-align: left;
+}
+.skill-container {
+  margin-top: 2rem;
+}
+.skill-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.skill-item {
+  width: fit-content;
+  color: #ccd6f6;
+  position: relative;
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+.skill-item::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: #64ffda;
+  font-size: 12px;
+  line-height: 15px;
+}
+.aboutusimage-container {
+  width: 300px;
+  height: 475px;
+  /* border: 3px solid red; */
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+.aboutus-image {
+  object-fit: contain;
+  z-index: 1;
+}
+/* For the border box in the background of the image */
+.aboutusimage-container::before {
+  content: "";
+  position: absolute;
+  border: 5px solid #64ffda;
+  width: 100%;
+  height: 46%;
+  bottom: 14.8rem;
+  left: 0.3rem;
+  font-size: 30px;
+  color: white;
+  z-index: -1;
+}
+
+.aboutusimage-container:hover {
+  transform: translate(-2%, -2%);
+}
+.aboutusimage-container:hover::before {
+  transform: translate(1.5%, 1.5%);
+}
+.aboutusimage-container:hover::after {
+  background-color: transparent;
+}
+/* For overlay in the about us image */
+.aboutusimage-container::after {
+  content: "";
+  position: absolute;
+  background-color: #64ffda;
+  opacity: 0.4;
+  width: 100%;
+  height: 47.4%;
+  bottom: 15.6rem;
+  font-size: 30px;
+  color: white;
+  z-index: 2;
+}
+
+/* ----------Experience Section--------------- */
+
+.experience-section {
+  margin-top: 5rem;
+  width: 50%;
+  gap: 2rem;
+}
+
+.experience-content {
+  display: flex;
+  align-items: start;
+  gap: 5rem;
+}
+.organization-name {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.organization-list {
+  padding: 1rem;
+  border-left: 1px solid rgb(136, 146, 176);
+}
+
+.organization-list:active {
+  border-left: 1px solid #64ffda;
+  background-color: rgba(100, 255, 218, 0.2);
+}
+.task-description {
+  width: fit-content;
+  position: relative;
+  padding-left: 1.875rem;
+  margin-top: 1rem;
+  font-size: 18px;
+  width: 90%;
+  letter-spacing: 0px;
+}
+.task-description::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: #64ffda;
+  font-size: 20px;
+  line-height: 15px;
+}
+
+.rolein-organization {
+  font-size: 22px;
+  color: #ccd6f6;
+  font-weight: 500;
+}
+.staytimein-organization {
+  font-size: 13px;
+}
+
+/* --------------For the All Project------------------- */
+.project-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.project-grid {
+  margin-top: 5rem;
+  color: rgb(136, 146, 176);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  grid-gap: 3rem;
+}
+.project-container {
+  background-color: hsl(218, 58%, 16%);
+  width: 350px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.archive {
+  padding-left: 9rem;
+  margin-top: 1rem;
+}
+.project-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.project-link {
+  display: flex;
+  width: 10rem;
+  align-items: center;
+  padding-top: 1rem;
+  margin-left: 7rem;
+}
+.project-link > svg {
+  fill: rgb(204, 214, 246);
+}
+.project-link svg:hover {
+  fill: #64ffda;
+}
+.project-heading {
+  font-size: 22px;
+}
+.project-description {
+  text-align: center;
+  padding: 3px;
+}
+.technology-usedinproject {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.showmore-btn {
+  padding: 1.3rem 2.5rem;
+  margin-top: 3rem;
+}
+
+/*---------------------- For the Contact US---------------- */
+
+.contactus-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  margin-top: 10rem;
+}
+
+.contactus-description {
+  color: rgb(136, 146, 176);
+  width: 600px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.contactus-heading {
+  text-align: center;
+  overflow: hidden;
+  color: rgb(204, 214, 246);
+  font-size: 60px;
+}
+
+.contact-btn {
+  margin-top: 4.5rem;
+  width: 170px;
+  height: 70px;
+}
+
+/*---------------------- For the Footer Section---------------- */
+.footer-section {
+  margin-top: 10rem;
+  color: rgb(204, 214, 246);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-heading {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.footer-icon {
+  display: flex;
+  align-items: center;
+}
+.svg-star {
+  width: 22px;
+  margin-top: -0.1px;
+}
+.svg-git {
+  width: 35px;
+  margin-top: 1.1rem;
+}
+.footer-icon svg {
+  object-fit: contain;
+  fill: rgb(204, 214, 246);
+}
+.svgimage {
+  margin-top: 10rem;
+}
+
+.footer-section:hover p,
+.footer-section:hover svg {
+  color: #64ffda;
+  fill: #64ffda;
+}
+
+/*--------------------Style in the footer-------------- */
+
+.footer-container {
+  background-color: pink;
+}
