@@ -7,15 +7,97 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- All the attributes used in input tag: type,name,value,placeholder,required,disabled,readonly,maxlength, min,max step,pattern,autofocus, autocomplete,size, multiple,accept -->
+    <!-- All the attributes used in input tag:
+       type,name, id, value,placeholder,required,disabled,readonly,maxlength, min,max step,pattern,autofocus, autocomplete,size, multiple,accept -->
     <!-- The input types are: text,password, email,number, email, checkbox, radio, file,date,time,texrarea, color, range,submit -->
 
     <form action="" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" />
-      <label for="address">Address</label>
-      <input type="text" id="address" />
-      <input type="submit" value="My Form" />
+      <label for="first-name">Name:</label>
+
+      <input
+        id="phone-number"
+        type="number"
+        placeholder="000000000"
+        name="phone-number"
+        required
+        min="0"
+        max="1000"
+        step="3"
+        autofocus
+      />
+      <input type="checkbox" name="agree" value="yes" />
+      <input type="file" multiple accept=".jpg, .png" />
+      <input type="submit" value="Apply" />
+      <input
+        id="first-name"
+        type="text"
+        placeholder="Hemant Basnet"
+        name="first-name"
+        required
+        size="10"
+        maxlength="3"
+        autocomplete="honorific-prefix"
+        autocorrect
+      />
+      <input type="date" name="birthdate" />
+      <input type="range" name="volume" min="0" max="100" />
+      <input type="color" name="volume" min="0" max="100" />
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </form>
+    <hr />
+    <hr />
+    <form action="" method="">
+      <div>
+        <label for="name">Text-Type:</label>
+        <input type="text" id="name" />
+      </div>
+      <div>
+        <label for="password">Password-Type:</label>
+        <input type="Password" id="password" />
+      </div>
+      <div>
+        <label for="email">Email-Type:</label>
+        <input type="email" id="email" />
+      </div>
+      <div>
+        <label for="stock-item">Number-Type:</label>
+        <input type="number" id="stock-item" />
+      </div>
+      <div>
+        <label for="terms-condition">Checkbox-Type:</label>
+        <input type="checkbox" id="terms-condition" />
+      </div>
+      <div>
+        <label for="product">Radio Button:</label>
+        <input type="radio" id="product" />
+      </div>
+      <div>
+        <label for="image">File Type:</label>
+        <input type="file" id="image" />
+      </div>
+      <div>
+        <label for="deadline-date">Date-type</label>
+        <input type="date" id="deadline-date" />
+      </div>
+      <div>
+        <label for="current-time">Time-Type</label>
+        <input type="time" id="current-time" />
+      </div>
+      <div>
+        <label for="description">Tetx-Area</label>
+        <textarea name="" id="description" cols="30" rows="10"></textarea>
+      </div>
+      <div>
+        <label for="choose-color">Color-Type</label>
+
+        <input type="color" id="choose-color" />
+      </div>
+      <div>
+        <label for="range-input">Range-Type</label>
+        <input type="range" id="range-input" />
+      </div>
+
+      <input type="submit" value="Apply" />
     </form>
   </body>
 </html>
