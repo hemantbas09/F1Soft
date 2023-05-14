@@ -1,0 +1,23 @@
+/*
+1. universal selector has no specificity and get 0 points that means any rule with 1 or more can overwrite it.
+2.element and pseudo-element selector gets 1 point of specificity.
+3.class, pseudo-class or attribute gets 10 points.
+4.id getst 100 point of specificity::after
+5.inline style gets 1000 points
+6.!import get 10,000
+*/
+h1.heading {
+  color: orange;
+}
+
+#mainheading {
+  color: green;
+}
+
+.heading {
+  color: pink;
+}
+
+h1 {
+  color: red;
+}
