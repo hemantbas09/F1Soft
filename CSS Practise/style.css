@@ -1,3 +1,62 @@
+/* -------------------Selector-------------------------- */
+
+/*
+ 1.* this is universal selector it affect in every element of html.
+ 2. element selector, class selector, id selector,attribute selector, Grouping selector:
+3. Pseudo-classes: :hover, :before, :after, 
+3. Complex Selector:
+ */
+/* href value is nepal.np */
+[href*="nepal.np"] {
+  color: red;
+}
+[href^="https"] {
+  color: orange;
+}
+/* href value end with .com */
+[href$=".com"] {
+  color: pink;
+}
+[name="name"] {
+  background-color: green;
+}
+[name="email"] {
+  background-color: pink;
+}
+/* combinator css */
+p > strong {
+  color: aqua;
+}
+ul > li {
+  background-color: lightcyan;
+}
+
+ul li:first-child {
+  /* background-color: red; */
+}
+ul li:last-child {
+  color: red;
+}
+ul li:nth-child(2n + 1) {
+  /* color: orange; */
+}
+/* Decendant selector */
+ul > .element9 {
+  color: green;
+}
+/* child selector */
+ul > .element9 {
+  color: orange;
+}
+/* Adjecent sibiling */
+.element9 + .element10 {
+  background-color: rgb(91, 126, 157);
+}
+/* General Sibiling Selector */
+.element2 ~ .element7 {
+  background-color: blanchedalmond;
+}
+/* -------------------Specificity------------------------------- */
 /*
 1. universal selector has no specificity and get 0 points that means any rule with 1 or more can overwrite it.
 2.element and pseudo-element selector gets 1 point of specificity.
@@ -9,9 +68,17 @@
 h1.heading {
   color: orange;
 }
+h1.heading:hover {
+  color: red;
+  background-color: orangered;
+}
+/* Here hover cannot working beacuse hover have 21 point but id have 100 point */
 
 #mainheading {
-  color: green;
+  /* color: green; */
+}
+#mainheading::selection {
+  color: pink;
 }
 
 .heading {
@@ -19,5 +86,94 @@ h1.heading {
 }
 
 h1 {
-  color: red;
+  color: #ff000010;
+}
+
+/* -----------Units---------------- */
+/* px, %, em(it take parent ), rem(it take root),viewport percentage(vm, vh, vmin, vmax), point,in,cm,mm (commonly used in print design for presise measurement )  */
+ul {
+  font-size: 10vw;
+}
+li {
+  font-size: 1em;
+  /* font-size: 100px; */
+}
+
+/*---------------------- colors--------------- */
+/*
+ 1. Color keyword: simplely use color name red, blue 
+ 2. Hexadecimal Notation: color denotae by the hexadecimal value eg.  #FF0000(first 2 red, second 2 green, third 2 blue), we can also use opacity in this color  #FF000000 last two value represent opacity or alpha.
+ 3.RGB and RGBA Notation: rgb(255, 0, 0)-->((red,blue, green) A denote the alpha or opacity
+ 4.HSL and HSLA Notation: hsl(0, 100%, 50%)-->(Hue, saturation , lightness)
+ 5.Color Functions: rgba(), hsl(), hsla(), rgb(), hsl(), var(),
+  linear-gradient(), radial-gradient() and more on: 
+ 
+ */
+
+/* -------------------------------------Background Image------------------------ */
+/* 
+1. Background color: we can use background only color:
+2. background-image: we can use backgroun as a image or gradient color.
+3. background- in this we can use anything.
+background properties-> 
+1.background-repeat(repeat, round,space,no-repeat,repeat-x,repeat-y)
+2. background-position: 
+3. background size: auto cover contain
+background-attachment: local,scroll,fixed ;
+
+body {
+  height: 100vh;
+  background: url(download.jpeg);
+  background-repeat: no-repeat;
+  background-position: top 20% left 30%;
+  background-size: contain;
+  background-attachment: local ;
+  background-origin: border-box,
+}
+*/
+.parent {
+  border: 2px solid red;
+  height: 20rem;
+  width: 30rem;
+  position: sticky;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: stretch;
+  justify-content: center;
+}
+.child1 {
+  background-color: green;
+  width: 5rem;
+  height: 4rem;
+  display: inline;
+}
+.child2 {
+  background-color: red;
+  width: 5rem;
+  display: inline;
+  height: 4rem;
+  top: -10px;
+  bottom: 0;
+}
+.child3 {
+  background-color: aqua;
+  width: 5rem;
+  display: inline;
+  height: 4rem;
+}
+
+.container {
+  display: flex;
+  /* align-items: stretch; */
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  box-shadow:inset 10px 8px 4px 1px  lightcoral;
+}
+
+.item {
+  flex: 1;
+  /* background-color: lightblue; */
+  border: 1px solid blue;
+  text-shadow: 2px 3px 1px red;
 }

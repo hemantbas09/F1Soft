@@ -1,0 +1,13 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+  grid-template-rows: 60px 70px;
+  column-gap: 30px;
+}
+
+.item {
+  flex: 0 0 100px;
+  background-color: lightblue;
+  border: 1px solid blue;
+  margin: 5px;
+}

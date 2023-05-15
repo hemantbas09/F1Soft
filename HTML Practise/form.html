@@ -11,9 +11,9 @@
        type,name, id, value,placeholder,required,disabled,readonly,maxlength, min,max step,pattern,autofocus, autocomplete,size, multiple,accept -->
     <!-- The input types are: text,password, email,number, email, checkbox, radio, file,date,time,texrarea, color, range,submit -->
 
-    <form action="" method="POST">
+    <form action="" method="">
       <label for="first-name">Name:</label>
-
+      <select name="" id=""></select>
       <input
         id="phone-number"
         type="number"
@@ -49,11 +49,11 @@
     <form action="" method="">
       <div>
         <label for="name">Text-Type:</label>
-        <input type="text" id="name" />
+        <input type="text" id="name" name="name" />
       </div>
       <div>
         <label for="password">Password-Type:</label>
-        <input type="Password" id="password" />
+        <input type="Password" id="password" name="password" />
       </div>
       <div>
         <label for="email">Email-Type:</label>
@@ -99,5 +99,17 @@
 
       <input type="submit" value="Apply" />
     </form>
+    <marquee width="60%" direction="right" height="100px">
+      This is a sample scrolling text that has scrolls texts to down.
+    </marquee>
+    <fieldset>
+      <legend>What is your favorite web technology</legend>
+
+      <label for="html">HTML</label>
+      <input type="radio" name="webfeature" value="html" id="html" />
+
+      <label for="css">CSS</label>
+      <input type="radio" name="webfeature" value="css" id="css" />
+    </fieldset>
   </body>
 </html>
